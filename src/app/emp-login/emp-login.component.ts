@@ -29,7 +29,7 @@ export class EmpLoginComponent {
           console.log(empid)
           localStorage.setItem("userinfo",empid)
           
-          this.route.navigate(["/uf"])
+          this.route.navigate(["/epf"])
         } else {
           alert(response.message)
         }

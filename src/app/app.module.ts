@@ -16,6 +16,10 @@ import { EmpDeleteComponent } from './emp-delete/emp-delete.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { EmploginComponent } from './emplogin/emplogin.component';
 import { AddSecurityComponent } from './add-security/add-security.component';
+import { AddinfoComponent } from './addinfo/addinfo.component';
+import { EmpinfoComponent } from './empinfo/empinfo.component';
+import { EmpnavComponent } from './empnav/empnav.component';
+import { LeaveapplyComponent } from './leaveapply/leaveapply.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -44,6 +48,14 @@ const myRoute:Routes=[
   {
     path:"addsec",
     component:AddSecurityComponent
+  },
+  {
+    path:"epf",
+    component:EmpinfoComponent
+  },
+  {
+    path:"apl",
+    component:LeaveapplyComponent
   }
 ]
 @NgModule({
@@ -58,7 +70,11 @@ const myRoute:Routes=[
     EmpDeleteComponent,
     AddEmpComponent,
     EmploginComponent,
-    AddSecurityComponent
+    AddSecurityComponent,
+    AddinfoComponent,
+    EmpinfoComponent,
+    EmpnavComponent,
+    LeaveapplyComponent
   ],
   imports: [
     BrowserModule,

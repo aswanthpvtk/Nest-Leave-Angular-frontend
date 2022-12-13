@@ -40,4 +40,12 @@ export class ApiService {
     return this.http.post("http://localhost:8080/employeeLogin",dataToSend)
 
   }
+
+  emppf=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/employeeProfile",dataToSend)
+
+  }
+
+  
 }
