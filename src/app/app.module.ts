@@ -11,6 +11,7 @@ import { EmpLoginComponent } from './emp-login/emp-login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EmpviewComponent } from './empview/empview.component';
 import { AdmNavComponent } from './adm-nav/adm-nav.component';
+import { SearchEmpComponent } from './search-emp/search-emp.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -24,10 +25,10 @@ const myRoute:Routes=[
     path:"ev",
     component:EmpviewComponent
   },
-  // {
-  //   path:"ts",
-  //   component:AddTaskComponent
-  // }
+  {
+    path:"se",
+    component:SearchEmpComponent
+  }
 ]
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ const myRoute:Routes=[
     MainNavComponent,
     EmpLoginComponent,
     EmpviewComponent,
-    AdmNavComponent
+    AdmNavComponent,
+    SearchEmpComponent
   ],
   imports: [
     BrowserModule,
