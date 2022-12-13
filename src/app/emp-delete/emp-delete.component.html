@@ -1,0 +1,47 @@
+<app-adm-nav></app-adm-nav>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee id:</label>
+                    <input type="text" name="name" [(ngModel)]="name" id="" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValues()" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4" *ngFor="let i of searchData">
+                <div class="row mt-5 g-3">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">email</th>
+                                    <th scope="col">designation</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>{{i.empCode}}</td>
+                                    <td>{{i.name}}</td>
+                                    <td>{{i.email}}</td>
+                                    <td>{{i.designation}}</td>
+                                    <th scope="col"><button class="btn btn-danger" href="/up">delete</button></th>
+    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
