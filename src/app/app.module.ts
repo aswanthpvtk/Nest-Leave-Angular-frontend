@@ -10,6 +10,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { EmpLoginComponent } from './emp-login/emp-login.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EmpviewComponent } from './empview/empview.component';
+import { AdmNavComponent } from './adm-nav/adm-nav.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -34,7 +35,8 @@ const myRoute:Routes=[
     AdminLoginComponent,
     MainNavComponent,
     EmpLoginComponent,
-    EmpviewComponent
+    EmpviewComponent,
+    AdmNavComponent
   ],
   imports: [
     BrowserModule,
