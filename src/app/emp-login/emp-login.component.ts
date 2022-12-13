@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-emp-login',
@@ -7,32 +9,32 @@ import { Component } from '@angular/core';
 })
 export class EmpLoginComponent {
 
-  email=""
-  psw=""
+  username=""
+  password=""
 
-  // constructor(private api: ApiService, private route: Router) { }
+  constructor(private api: ApiService, private route: Router) { }
 
 
   readValues=()=>
   {
-    let data:any={"email":this.email,"psw":this.psw}
+    let data:any={"username":this.username,"password":this.password}
     console.log(data)
 
-    // this.api.userLogin(data).subscribe(
-    //   (response: any) => {
-    //     this.email = ""
-    //     this.psw = ""
-    //     if (response.status == "success"){
-    //       let empid=response.userId
-    //       console.log(empid)
-    //       localStorage.setItem("userinfo",empid)
+    this.api.emplogin(data).subscribe(
+      (response: any) => {
+        this.username = ""
+        this.password = ""
+        if (response.status == "success"){
+          let empid=response.userId
+          console.log(empid)
+          localStorage.setItem("userinfo",empid)
           
-    //       this.route.navigate(["/uf"])
-    //     } else {
-    //       alert(response.message)
-    //     }
-    //   }
-    // )
+          this.route.navigate(["/uf"])
+        } else {
+          alert(response.message)
+        }
+      }
+    )
   }
 
 

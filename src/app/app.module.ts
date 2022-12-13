@@ -14,6 +14,8 @@ import { AdmNavComponent } from './adm-nav/adm-nav.component';
 import { SearchEmpComponent } from './search-emp/search-emp.component';
 import { EmpDeleteComponent } from './emp-delete/emp-delete.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
+import { EmploginComponent } from './emplogin/emplogin.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -38,6 +40,10 @@ const myRoute:Routes=[
   {
     path:"addemp",
     component:AddEmpComponent
+  },
+  {
+    path:"addsec",
+    component:AddSecurityComponent
   }
 ]
 @NgModule({
@@ -50,7 +56,9 @@ const myRoute:Routes=[
     AdmNavComponent,
     SearchEmpComponent,
     EmpDeleteComponent,
-    AddEmpComponent
+    AddEmpComponent,
+    EmploginComponent,
+    AddSecurityComponent
   ],
   imports: [
     BrowserModule,
