@@ -9,9 +9,10 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
 
-  viewemp=(dataToSend:any)=>
+  
+  Empview=()=>
   {
-    return this.http.post("http://localhost:8080/viewtask",dataToSend)
+    return this.http.get("http://localhost:8080/viewAllEmployee")
   }
 
 }

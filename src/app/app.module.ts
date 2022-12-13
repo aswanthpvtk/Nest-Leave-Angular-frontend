@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { EmpLoginComponent } from './emp-login/emp-login.component';
 import {HttpClientModule} from '@angular/common/http';
+import { EmpviewComponent } from './empview/empview.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -18,10 +19,10 @@ const myRoute:Routes=[
     path:"u",
     component:EmpLoginComponent
   },
-  // {
-  //   path:"ur",
-  //   component:EmpRegisComponent
-  // },
+  {
+    path:"ev",
+    component:EmpviewComponent
+  },
   // {
   //   path:"ts",
   //   component:AddTaskComponent
@@ -32,7 +33,8 @@ const myRoute:Routes=[
     AppComponent,
     AdminLoginComponent,
     MainNavComponent,
-    EmpLoginComponent
+    EmpLoginComponent,
+    EmpviewComponent
   ],
   imports: [
     BrowserModule,
