@@ -5,17 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { EmpLoginComponent } from './emp-login/emp-login.component';
 const myRoute:Routes=[
   {
     path:"",
     component:AdminLoginComponent
   },
-  // {
-  //   path:"ul",
-  //   component:EmpLoginComponent
-  // },
+  {
+    path:"u",
+    component:EmpLoginComponent
+  },
   // {
   //   path:"ur",
   //   component:EmpRegisComponent
@@ -29,12 +30,14 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    MainNavComponent
+    MainNavComponent,
+    EmpLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
