@@ -9,34 +9,27 @@ import { ApiService } from '../api.service';
 })
 export class EmpLoginComponent {
 
+  constructor(private api:ApiService, private route:Router){}
   username=""
   password=""
 
-  constructor(private api: ApiService, private route: Router) { }
-
-
-  readValues=()=>
-  {
-    let data:any={"username":this.username,"password":this.password}
-    console.log(data)
-
-    this.api.emplogin(data).subscribe(
-      (response: any) => {
-        this.username = ""
-        this.password = ""
-        if (response.status == "success"){
-          let empid=response.userId
-          console.log(empid)
-          localStorage.setItem("userinfo",empid)
-          
-          this.route.navigate(["/epf"])
-        } else {
-          alert(response.message)
-        }
+  readValues = ()=>{
+      let data:any = {
+          "username":this.username,
+          "password":this.password
       }
-    )
-  }
+      this.api.emplogin(data).subscribe(
+          (response:any)=>{
+              if(response.status=="success"){
+                  localStorage.setItem("userInfo",response.userInfo)
+                  this.route.navigate(["/epf"])
+              }else{
+                  alert("failed")
+              }
+          }
+      )
 
+  }
 
 
 }
