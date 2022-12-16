@@ -1,0 +1,49 @@
+
+
+<app-adm-nav></app-adm-nav>
+<div class="container">
+    <div class="row">
+        
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <h1 >Edit Employee</h1>
+                    </div>
+                    <div class="row ">
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label text-secondary">Employee Code</label>
+                            <input type="text" class="form-control" name="empCode" [(ngModel)]="empCode"  value="{{empCode}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label">Employee Name:</label>
+                            <input type="text" class="form-control" name="empName" [(ngModel)]="empName"  value="{{empName}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label ">email:</label>
+                            <input type="text" class="form-control" name="empEmail" [(ngModel)]="empEmail"  value="{{empEmail}}">
+                        </div>
+                       
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label"> Designation:</label>
+                            <input type="text" class="form-control" name="empDesignation" [(ngModel)]="empDesignation" value="{{empDesignation}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label "> phone:</label>
+                            <input type="text" class="form-control" name="empPhone" [(ngModel)]="empPhone"  value="{{empPhone}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label ">Username:</label>
+                            <input type="text" class="form-control" name="username" [(ngModel)]="username"  value="{{username}}">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 d-flex justify-content-center mt-5">
+                            <button class="btn btn-primary p-2 mx-3" (click)="readValues()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5 d-flex justify-content-center">
+                   
+                
+            </div>
+        </div>    
+    </div>
+</div>
