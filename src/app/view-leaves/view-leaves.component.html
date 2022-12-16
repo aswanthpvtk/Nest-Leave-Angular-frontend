@@ -1,0 +1,72 @@
+
+<
+<div class="container">
+    <div class="row mt-4">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h1 class="text-center">All Leaves</h1>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center" scope="col">Empid</th>
+                                <th class="text-center" scope="col">Applied</th>
+                                <th class="text-center" scope="col">Name</th>
+                                <th class="text-center" scope="col">Type</th>
+                                <th class="text-center" scope="col">From</th>
+                                <th class="text-center" scope="col">To</th>
+                                <th class="text-center" scope="col">Reason</th>
+                                <th class="text-center" scope="col">Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngIf="loading; then loadingScreen; else dataScreen"></ng-container>
+                            <ng-template #loadingScreen class="text-center">
+                                <div class="spinner-grow text-danger" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-warning" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </ng-template>
+                            <ng-template #dataScreen>
+                                <tr *ngFor="let i of leaves">
+                                    <td class="text-center">{{i.emp_code}}</td>
+                                    <td class="text-center">{{i.apply_date}}</td>
+                                    <td class="text-center">{{i.name}}</td>
+                                    <td class="text-center">{{i.leave_type}}</td>
+                                    <td class="text-center">{{i.from_date}}</td>
+                                    <td class="text-center">{{i.to_date}}</td>
+                                    <td class="text-center">{{i.remarks}}</td>
+                                    <div *ngIf="i.leave_status==0; then thenBlock else elseBlock"></div>
+                                    <ng-template #thenBlock>
+                                            <td class="text-center">Pending</td>
+                                    </ng-template>
+                                    <ng-template #elseBlock>
+                                        <div *ngIf="i.leave_status==1; then thensBlock else elsesBlock"></div>
+                                            <ng-template #thensBlock>
+                                                <td class="text-center">Approved</td>
+                                            </ng-template>
+                                            <ng-template #elsesBlock>
+                                                <td class="text-center">Rejected</td>
+                                            </ng-template>
+                                    </ng-template>
+                                    <td style="width: 13rem;" class="text-center">
+                                        <button class="btn btn-success mx-2" (click)="updateStatus(i.id,i.empId,1,i.leave_type,i.from_date,i.to_date)">Approve</button>
+                                        <button class="btn btn-danger" (click)="updateStatus(i.id,i.empId,-1,i.leave_type,i.from_date,i.to_date)">Reject</button>
+                                    </td>
+                            </ng-template>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
