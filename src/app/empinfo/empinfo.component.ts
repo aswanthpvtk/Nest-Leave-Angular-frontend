@@ -8,20 +8,20 @@ import { ApiService } from '../api.service';
 })
 export class EmpinfoComponent {
 
-  empCode:any=""
+  data:any = {
+    "id":localStorage.getItem("userInfo")
+  }
   constructor(private api:ApiService){
-    this.empCode=localStorage.getItem("userinfo")
-    let data:any={"id":this.empCode}
-    
-    this.api.emppf(data).subscribe(
-      (response:any)=>{
-        console.log(response)
-        this.data=response
-      }
-    )
-
+      api.emppf(this.data).subscribe(
+        (response:any)=>{
+          console.log(localStorage.getItem("usrInfo"))
+          console.log(response)
+          this.employee = response
+        }
+      )
+  }
+  employee:any = []
   }
 
-  data:any=[]
+  
 
-}
