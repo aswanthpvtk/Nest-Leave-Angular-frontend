@@ -27,6 +27,7 @@ import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
 import { ViewEmpLogComponent } from './view-emp-log/view-emp-log.component';
 import { ViewVisitLogComponent } from './view-visit-log/view-visit-log.component';
+import { SecEmpLogComponent } from './sec-emp-log/sec-emp-log.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -87,6 +88,10 @@ const myRoute:Routes=[
   {
     path:"vislog",
     component:ViewVisitLogComponent
+  },
+  {
+    path:"secemplog",
+    component:SecEmpLogComponent
   }
 ]
 @NgModule({
@@ -112,7 +117,8 @@ const myRoute:Routes=[
     EditEmpComponent,
     ViewLeavesComponent,
     ViewEmpLogComponent,
-    ViewVisitLogComponent
+    ViewVisitLogComponent,
+    SecEmpLogComponent
   ],
   imports: [
     BrowserModule,
