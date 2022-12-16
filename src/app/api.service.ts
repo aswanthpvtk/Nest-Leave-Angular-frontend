@@ -54,6 +54,10 @@ export class ApiService {
     return this.http.post("http://localhost:8080/applyLeave",data)
   }
 
+  securityProfile = (data:any) =>{
+    return this.http.post("http://localhost:8080/securityProfile", data)
+  }
+
   securityLogin = (data:any)=>{
     return this.http.post("http://localhost:8080/securityLogin", data)
   }
