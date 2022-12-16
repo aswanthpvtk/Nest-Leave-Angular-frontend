@@ -78,6 +78,23 @@ export class ApiService {
   getId = (data:any)=>{
     return this.http.post("http://localhost:8080/employeeProfile", data)
   }
+  getSecEmpLogs = ()=>{
+    return this.http.get("http://localhost:8080/viewSecEmpLog")
+  }
+
+  getSecVisLogs = ()=>{
+    return this.http.get("http://localhost:8080/viewSecVisLog")
+  }
+
+  searchLogs = (data:any)=>{
+    return this.http.post("http://localhost:8080/searchEmpLog",data)
+  }
+
+  searchVisLogs = (data:any)=>{
+    return this.http.post("http://localhost:8080/searchVisLog",data)
+  }
+  
+
   
 
   
