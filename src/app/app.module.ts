@@ -25,6 +25,7 @@ import { SecurityProfileComponent } from './security-profile/security-profile.co
 import { SecNavbarComponent } from './sec-navbar/sec-navbar.component';
 import { EditEmpComponent } from './edit-emp/edit-emp.component';
 import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
+import { ViewEmpLogComponent } from './view-emp-log/view-emp-log.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -77,6 +78,10 @@ const myRoute:Routes=[
   {
     path:"adleave",
     component:ViewLeavesComponent
+  },
+  {
+    path:"emplog",
+    component:ViewEmpLogComponent
   }
 ]
 @NgModule({
@@ -100,7 +105,8 @@ const myRoute:Routes=[
     SecurityProfileComponent,
     SecNavbarComponent,
     EditEmpComponent,
-    ViewLeavesComponent
+    ViewLeavesComponent,
+    ViewEmpLogComponent
   ],
   imports: [
     BrowserModule,
