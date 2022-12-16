@@ -21,6 +21,7 @@ import { EmpinfoComponent } from './empinfo/empinfo.component';
 import { EmpnavComponent } from './empnav/empnav.component';
 import { LeaveapplyComponent } from './leaveapply/leaveapply.component';
 import { SecurityLoginComponent } from './security-login/security-login.component';
+import { SecurityProfileComponent } from './security-profile/security-profile.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -61,6 +62,10 @@ const myRoute:Routes=[
   {
     path:"sl",
     component:SecurityLoginComponent
+  },
+  {
+    path:"sf",
+    component:SecurityProfileComponent
   }
 ]
 @NgModule({
@@ -80,7 +85,8 @@ const myRoute:Routes=[
     EmpinfoComponent,
     EmpnavComponent,
     LeaveapplyComponent,
-    SecurityLoginComponent
+    SecurityLoginComponent,
+    SecurityProfileComponent
   ],
   imports: [
     BrowserModule,

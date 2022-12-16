@@ -23,7 +23,7 @@ export class SecurityLoginComponent {
       (response:any)=>{
         if(response.status=="success"){
           localStorage.setItem("userInfo",response.userInfo)
-          this.route.navigate(["/viewSecurityProfile"])
+          this.route.navigate(["/sf"])
         }else{
           alert("error")
         }
