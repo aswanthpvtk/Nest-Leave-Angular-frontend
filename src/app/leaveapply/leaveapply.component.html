@@ -13,20 +13,13 @@
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5">
                             <label class="mb-2" for=""><h5>Available Leaves</h5></label>
                             <table class="table justify-content-center table-striped table-bordered mb-5">
-                                <!-- <thead class="bg-light">
-                                    <tr>
-                                        <th class="text-center" scope="col">Casual Leaves</th>
-                                        <th class="text-center" scope="col">Sick Leaves</th>
-                                        <th class="text-center" scope="col">Special Leaves</th>
-                                    </tr>
-                                </thead> -->
-                                <!-- <tbody> -->
+                                
                                     <tr *ngFor="let i of leaveDetails">
                                         <h5 >Casual Leave:{{i.casualLeave}}</h5>
                                         <h5>Sick Leave:{{i.sickLeave}}</h5>
                                         <h5>Special Leave:{{i.specialLeave}}</h5>
                                     </tr>
-                                <!-- </tbody> -->
+                               
                             </table>
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
